@@ -25,7 +25,6 @@ header {
 header h1 {
     margin: 0;
     font-size: 32px;
-    letter-spacing: 2px;
 }
 
 .container {
@@ -57,10 +56,6 @@ header h1 {
     padding: 15px;
 }
 
-.product h2 {
-    margin: 0;
-}
-
 .price {
     color: #27ae60;
     font-size: 18px;
@@ -70,7 +65,7 @@ header h1 {
 button {
     width: 100%;
     padding: 10px;
-    background: black;
+    background: #E1306C;
     color: white;
     border: none;
     border-radius: 8px;
@@ -79,7 +74,7 @@ button {
 }
 
 button:hover {
-    background: #444;
+    background: #c72c61;
 }
 
 .payment {
@@ -93,7 +88,6 @@ button:hover {
     margin: 5px;
     display: inline-block;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 footer {
@@ -114,25 +108,23 @@ footer {
 
 <div class="container">
 
-    <!-- قلادة -->
     <div class="product">
-        <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1" alt="قلادة">
+        <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1">
         <div class="product-content">
             <h2>قلادة</h2>
             <p>تصميم أنيق يناسب جميع الإطلالات</p>
             <p class="price">150 شيكل</p>
-            <button onclick="order('قلادة')">اطلب الآن</button>
+            <button onclick="order()">اطلب عبر انستغرام</button>
         </div>
     </div>
 
-    <!-- اسوارة -->
     <div class="product">
-        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d" alt="اسوارة">
+        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d">
         <div class="product-content">
             <h2>اسوارة</h2>
             <p>اسوارة عصرية بجودة عالية</p>
             <p class="price">150 شيكل</p>
-            <button onclick="order('اسوارة')">اطلب الآن</button>
+            <button onclick="order()">اطلب عبر انستغرام</button>
         </div>
     </div>
 
@@ -147,14 +139,14 @@ footer {
 </div>
 
 <footer>
-    <p>© 2026 birilante by nuha</p>
+    <p>تابعينا على انستغرام</p>
+    <p>@your_instagram_username</p>
 </footer>
 
 <script>
-function order(product) {
-    let phone = "972532805855"; // حطي رقمك هون
-    let message = "مرحبا، بدي أطلب " + product;
-    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+function order() {
+    let username = "adam_abdelhadi2"; // ✏️ غيري هذا ليوزرك
+    let url = "https://www.instagram.com/" + username + "/";
     window.open(url, '_blank');
 }
 </script>
