@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>birilante by nuha</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    direction: rtl;
+}
+
+header {
+    background: black;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.container {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 15px;
+}
+
+.price {
+    color: #27ae60;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #1ebe5d;
+}
+
+.payment {
+    text-align: center;
+    margin: 30px;
+}
+
+.payment span {
+    background: white;
+    padding: 10px 15px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>birilante by nuha</h1>
+    <p>أناقة تلمع مع كل تفصيلة ✨</p>
+</header>
+
+<div class="container">
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1">
+        <div class="product-content">
+            <h2>قلادة</h2>
+            <p>تصميم أنيق يناسب جميع الإطلالات</p>
+            <p class="price">150 شيكل</p>
+            <button onclick="order('قلادة')">اطلب عبر واتساب</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d">
+        <div class="product-content">
+            <h2>اسوارة</h2>
+            <p>اسوارة عصرية بجودة عالية</p>
+            <p class="price">150 شيكل</p>
+            <button onclick="order('اسوارة')">اطلب عبر واتساب</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="payment">
+    <h3>طرق الدفع</h3>
+    <span>PayPal</span>
+    <span>كاش</span>
+    <span>Visa</span>
+    <span>MasterCard</span>
+</div>
+
+<footer>
+    <p>تابعينا على انستغرام</p>
+    <p>@your_instagram_username</p>
+</footer>
+
+<script>
+function order(productName) {
+    let phone = "972532805855"; // ✏️ حطي رقمك هون بدون +
+    let message = "مرحبا، أريد طلب " + productName + " من موقع birilante by nuha";
+    
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+    
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
